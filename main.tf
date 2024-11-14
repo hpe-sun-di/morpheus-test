@@ -21,11 +21,11 @@ terraform {
 #   default = "ew0KICAiSldUQXV0aG9yaXplcjEiOiB7DQogICAgImF1dGhvcml6ZXJfdHlwZSI6ICJKV1QiLA0KICAgICJuYW1lIjogIkpXVEF1dGhvcml6ZXIxIiwNCiAgICAiaWRlbnRpdHlfc291cmNlcyI6IFsiJHJlcXVlc3QuaGVhZGVyLkF1dGhvcml6YXRpb24iXSwNCiAgICAiYXV0aG9yaXplcl9yZXN1bHRfdHRsX2luX3NlY29uZHMiOiAwLA0KICAgICJhdWRpZW5jZSI6IFsidGVzdC1hdWRpZW5jZSJdLA0KICAgICJpc3N1ZXIiOiAiaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tLyINCiAgfQ0KfQ=="
 # }
 
-variable "test_data" {
-  description = "test data"
-  type = string
-  default = ""
-}
+# variable "test_data" {
+#   description = "test data"
+#   type = string
+#   default = ""
+# }
 
 variable "test_data2" {
   description = "test data"
@@ -36,7 +36,7 @@ variable "test_data2" {
 locals {
   # decoded_data = jsondecode(base64decode(var.base64_data))
 
-  test_data = jsondecode(base64decode(var.test_data))
+  # test_data = jsondecode(base64decode(var.test_data))
 
   # clean_identity_sources = {
   #   for authorizer_key, authorizer_config in var.raw_authorizers:
@@ -64,9 +64,9 @@ locals {
 #   value = local.decoded_data
 # }
 
-output "test_data" {
-  value = local.test_data
-}
+# output "test_data" {
+#   value = local.test_data
+# }
 
 output "test_data2" {
   value = var.test_data2

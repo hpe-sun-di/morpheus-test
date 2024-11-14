@@ -18,11 +18,13 @@ terraform {
 variable "base64_data" {
   description = "Base64 encoded data"
   type = string
+  default = ""
 }
 
 variable "test_data" {
   description = "test data"
   type = string
+  default = ""
 }
 
 locals {

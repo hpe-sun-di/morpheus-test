@@ -20,9 +20,15 @@ variable "base64_data" {
   type = string
 }
 
+variable "test_data" {
+  description = "test data"
+  type = string
+}
+
 locals {
   decoded_data = jsondecode(base64decode(var.base64_data))
 
+  test_data = jsondecode(base64decode(var.test_data))
   # clean_identity_sources = {
   #   for authorizer_key, authorizer_config in var.raw_authorizers:
   #   authorizer_key => {
@@ -47,6 +53,10 @@ locals {
 
 output "raw_data" {
   value = local.decoded_data
+}
+
+output "test_data" {
+  value = local.test_data
 }
 
 # resource "aws_instance" "app_server" {

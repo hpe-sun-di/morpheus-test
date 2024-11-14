@@ -18,7 +18,7 @@ terraform {
 variable "base64_data" {
   description = "Base64 encoded data"
   type = string
-  default = ""
+  default = "ew0KICAiSldUQXV0aG9yaXplcjEiOiB7DQogICAgImF1dGhvcml6ZXJfdHlwZSI6ICJKV1QiLA0KICAgICJuYW1lIjogIkpXVEF1dGhvcml6ZXIxIiwNCiAgICAiaWRlbnRpdHlfc291cmNlcyI6IFsiJHJlcXVlc3QuaGVhZGVyLkF1dGhvcml6YXRpb24iXSwNCiAgICAiYXV0aG9yaXplcl9yZXN1bHRfdHRsX2luX3NlY29uZHMiOiAwLA0KICAgICJhdWRpZW5jZSI6IFsidGVzdC1hdWRpZW5jZSJdLA0KICAgICJpc3N1ZXIiOiAiaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tLyINCiAgfQ0KfQ=="
 }
 
 variable "test_data" {
